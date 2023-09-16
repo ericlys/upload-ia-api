@@ -20,11 +20,10 @@ export async function uploadVideoRoute(app: FastifyInstance){
     const data = await request.file()
 
     if(!data) {
-      return reply.status(400).send({error: 'Missing file input'})
+      return reply.status(400).send({error: 'Missing file input.'})
     }
 
     const extension = path.extname(data.filename)
-    console.log(extension)
     if(extension !== '.mp3'){
       return reply.status(400).send({error: 'Invalid input type, please upload a MP3.'})
     }

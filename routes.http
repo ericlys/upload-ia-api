@@ -9,5 +9,15 @@ Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0g
 Content-Disposition: form-data; name="file"; filename="teste.mp3"
 Content-Type: audio/mpeg
 
-< ./teste.mp3
+< ./example.mp3
 ------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### 
+
+#@name create-transcription
+POST http://localhost:3333/videos/01b572be-fbf7-498d-bad4-0abe5e7137d5/transcription
+Content-Type: application/json
+
+{
+  "prompt": "iphone 15, software"
+}
