@@ -21,3 +21,15 @@ Content-Type: application/json
 {
   "prompt": "iphone 15, software"
 }
+
+### 
+
+#@name generate-ai-completion
+POST http://localhost:3333/ai/complete
+Content-Type: application/json
+
+{
+  "videoId": "01b572be-fbf7-498d-bad4-0abe5e7137d5",
+  "temperature": 0.5,
+  "template": "Gere um resumo sucinto da transcrição do vídeo informada a seguir: '''{transcription}'''"
+}
